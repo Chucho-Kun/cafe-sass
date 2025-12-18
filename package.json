@@ -1,0 +1,23 @@
+{
+  "name": "cafeteria",
+  "version": "1.0.0",
+  "description": "cafeteria realizada con SASS Gulp, CSS Grid",
+  "license": "ISC",
+  "author": "Jesus Peralta Arias",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "gulp": "^5.0.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.97.0"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}

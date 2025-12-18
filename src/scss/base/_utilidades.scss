@@ -1,0 +1,8 @@
+@use 'variables' as var;
+
+.text-center {
+    text-align: center;
+}
+.bg-primario {
+    background-color: var.$primario;
+}
