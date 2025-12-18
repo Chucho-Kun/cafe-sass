@@ -18,16 +18,25 @@ export function css() {
 export function imgWebp() {
     return src('src/img/**/*.{jpg,jpeg,png}', { read: false })
         .pipe(shell([
+            // file.relative incluye subcarpetas, se respeta la estructura
             'cwebp "<%= file.path %>" -q 70 -o "build/img/<%= file.relative.replace(/\\.[^.]+$/, ".webp") %>"'
-        ], { ignoreErrors: true }))
-        // no uses dest(), porque no hay buffer que copiar
+        ], { ignoreErrors: true }));
 }
+export function imgWebpGaleria() {
+    return src('src/galeria/**/*.{jpg,jpeg,png}', { read: false })
+        .pipe(shell([
+            // file.relative incluye subcarpetas, se respeta la estructura
+            'cwebp "<%= file.path %>" -q 70 -o "build/galeria/<%= file.relative.replace(/\\.[^.]+$/, ".webp") %>"'
+        ], { ignoreErrors: true }));
+}
+
 
 
 // Watcher
 export function dev() {
     watch('src/scss/**/*.scss', css);
     watch('src/img/**/*.{jpg,jpeg,png}', imgWebp);
+    watch('src/galeria/**/*.{jpg,jpeg,png}', imgWebpGaleria);
 }
 
-export default series(css, imgWebp, dev);
+export default series(css, imgWebp, imgWebpGaleria, dev);
