@@ -6,7 +6,7 @@
     <title>Cafetería SASS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="build/css/app.css">
 
 </head>
@@ -15,10 +15,10 @@
         <div class="contenido-header contenedor">
             <div class="barra">
                 <div class="logo">
-                    <img src="build/img/cafe.webp" alt="logo cafeteria">
+                    <img src="build/svg/logo.svg" alt="logo cafeteria">
                 </div>
-                <nav>
-                    <a href="index.html">Inicio</a>
+                <nav class="navegacion">
+                    <a class="activo" href="index.html">Inicio</a>
                     <a href="nosotros.html">Nosotros</a>
                     <a href="proceso.html">Proceso del café</a>
                     <a href="menu.html">Menú</a>
@@ -29,8 +29,178 @@
 
             <div class="texto-header">
                 <h1>Difruta una deliciosa taza de café</h1>
+                <p>
+                </p>
             </div>
         </div>
     </header>
+
+    <main class="contenedor contenido-principal text-center">
+        
+        <section class="conoce">
+            <h2> <span>Conoce más</span> sobre nosotros </h2>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </section>
+    
+        <section class="iconos">
+            <ul class="listado-iconos">
+                <li>
+                    <img src="build/svg/icono_cafe.svg" alt="icono cafe">
+                    <p>Café</p>
+                </li>
+                <li>
+                    <img src="build/svg/icono_postre.svg" alt="icono cafe">
+                    <p>Postres</p>
+                </li>
+                <li>
+                    <img src="build/svg/icono_te.svg" alt="icono cafe">
+                    <p>Té</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="experiencia">
+            <h2> <span>Vive la</span> Experiencia </h2>
+            <div class="galeria">
+                <div class="imagen">
+                    <img src="build/galeria/galeria_01.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_02.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_03.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_04.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_05.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_06.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_07.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_08.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_09.webp" alt="galeria">
+                </div>
+                <div class="imagen">
+                    <img src="build/galeria/galeria_10.webp" alt="galeria">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="nuestro-menu">
+        <h2 class="heading-blanco"> <span>Nuestro Delicioso</span> Menú </h2>
+        <div class="contenedor grid-menu">
+            <section class="menu cafe">
+                <h3>Café</h3>
+                <ul>
+                    <li>
+                        <p>Café Latte <span>Café Espresso con leche caliente evaporada</span> </p>
+                        <p class="precio">$25</p>
+                    </li>
+                    <li>
+                        <p>Café Mocha <span>Espresso con crema batida</span> </p>
+                        <p class="precio">$30</p>
+                    </li>
+                    <li>
+                        <p>Café Americano <span>Café Negro</span> </p>
+                        <p class="precio">$30</p>
+                    </li>
+                    <li>
+                        <p>Capuccino<span>Espresso con una capa suave de espuma</span> </p>
+                        <p class="precio">$25</p>
+                    </li>
+                    <li>
+                        <p>Café Mocha Frio<span>Espresso, dulce con mocha y leche.</span> </p>
+                        <p class="precio">$29</p>
+                    </li>
+                    <li>
+                        <p>Mocha Frio Quemado<span>Espresso, hielo, con azucar quemada y mantequilla.</span> </p>
+                        <p class="precio">$35</p>
+                    </li>
+                    <li>
+                        <p>Latte con Caramelo<span>Espresso, leche y caramelo.</span> </p>
+                        <p class="precio">$39</p>
+                    </li>
+                </ul>
+
+            </section>
+
+            <section class="menu comida">
+                <h3>Comida</h3>
+                <ul>
+                    <li>
+                        <p>Baguette de Pollo <span>Delicioso Baguette con pollo a la plancha</span> </p>
+                        <p class="precio">$45</p>
+                    </li>
+                    <li>
+                        <p>Baguette Pollo y Queso <span>Baguette combinado con Pollo y Queso Manchego</span> </p>
+                        <p class="precio">$50</p>
+                    </li>
+                    <li>
+                        <p>Baguette con Tocino<span>Baguette con especias y verduras, además de tocino</span> </p>
+                        <p class="precio">$50</p>
+                    </li>
+                    <li>
+                        <p>Baguette de Jamón<span>Delicioso Baguette con Jamón y Especias</span> </p>
+                        <p class="precio">$65</p>
+                    </li>
+                    <li>
+                        <p>Baguette con Jamón, Queso y Tocino<span>El especial de la casa</span> </p>
+                        <p class="precio">$69</p>
+                    </li>
+                    <li>
+                        <p>Sandwich de Pollo<span>Delicioso sandwich con Pollo y especies</span> </p>
+                        <p class="precio">$65</p>
+                    </li>
+                    <li>
+                        <p>Sandwich de Jamón y queso<span>Queso Amarillo con Jamón y Queso</span> </p>
+                        <p class="precio">$59</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+
+    <section class="nuestros-testimoniales contenedor margin-negativo-10 bg-white">
+        <h2> <span>Lo que dicen nuestros</span> Clientes</h2>
+        <div class="testimonial">
+            
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            
+            <p class="autor">- Jesus Peralta</p>
+        
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contenedor contenido-footer bg-white">
+            <div class="footer-box ubicacion">
+                <h3>Ubicación</h3>
+                <p>Primera Direccción</p>
+                <p>Guadalajarra, Jalisco</p>
+            </div>
+            <div class="footer-box reservacion">
+                <h3>Reservación</h3>
+                <p>Tel. 2345-2345</p>
+                <a tel="5534343434">Llamar</a>
+            </div>
+            <div class="footer-box horario">
+                <h3>Horarios</h3>
+                <p>Lun-Jue: 11:00 - 22:00</p>
+                <p>Vie-Sab: 09:00 - 24:00</p>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservados. La Cafeteria</p>
+    </footer>
+
 </body>
 </html>

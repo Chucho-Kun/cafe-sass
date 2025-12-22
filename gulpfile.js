@@ -9,7 +9,7 @@ import shell from 'gulp-shell';
 // CSS
 export function css() {
     return src('src/scss/app.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([autoprefixer()]))
         .pipe(dest('build/css'));
 }

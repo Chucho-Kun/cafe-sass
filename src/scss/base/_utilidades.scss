@@ -1,8 +1,15 @@
-@use 'variables' as var;
+@use 'variables' as v;
+@use 'mixins' as m;
 
 .text-center {
     text-align: center;
 }
 .bg-primario {
-    background-color: var.$primario;
+    background-color: v.$primario;
+}
+.bg-white {
+    background-color: v.$blanco;
+}
+.margin-negativo-10 {
+    margin-top: -10rem;
 }
