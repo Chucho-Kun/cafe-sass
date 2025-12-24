@@ -5,12 +5,16 @@ const sass = gulpSass(sassCompiler);
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import shell from 'gulp-shell';
+import sourcemaps from 'gulp-sourcemaps';
+import cssnano from "cssnano";
 
 // CSS
 export function css() {
     return src('src/scss/app.scss')
+        .pipe( sourcemaps.init() )
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([autoprefixer(), cssnano() ]))
+        .pipe( sourcemaps.write('.') )
         .pipe(dest('build/css'));
 }
 
@@ -19,14 +23,14 @@ export function imgWebp() {
     return src('src/img/**/*.{jpg,jpeg,png}', { read: false })
         .pipe(shell([
             // file.relative incluye subcarpetas, se respeta la estructura
-            'cwebp "<%= file.path %>" -q 70 -o "build/img/<%= file.relative.replace(/\\.[^.]+$/, ".webp") %>"'
+            'cwebp "<%= file.path %>" -q 50 -o "build/img/<%= file.relative.replace(/\\.[^.]+$/, ".webp") %>"'
         ], { ignoreErrors: true }));
 }
 export function imgWebpGaleria() {
     return src('src/galeria/**/*.{jpg,jpeg,png}', { read: false })
         .pipe(shell([
             // file.relative incluye subcarpetas, se respeta la estructura
-            'cwebp "<%= file.path %>" -q 70 -o "build/galeria/<%= file.relative.replace(/\\.[^.]+$/, ".webp") %>"'
+            'cwebp "<%= file.path %>" -q 50 -o "build/galeria/<%= file.relative.replace(/\\.[^.]+$/, ".webp") %>"'
         ], { ignoreErrors: true }));
 }
 
